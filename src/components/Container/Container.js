@@ -1,8 +1,6 @@
-import styles from './Container.module.css';
-
-export default function Container({ children, className }) {
+export default function Container({ children}) {
     return (
-        <div className={`${styles.container} ${className}`}>
+        <div className="max-w-[1200px] mx-auto">
             {children}
         </div>
     );

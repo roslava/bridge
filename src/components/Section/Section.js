@@ -1,9 +1,7 @@
-import styles from './Section.module.css';
-
-export default function Section({ children, className }) {
+export default function Section({ children }) {
     return (
-        <section className={`${styles.section} ${className}`}>
-            {children}
+        <section className="p-[20px] bg-[#f0f0f0]">
+                 {children}
         </section>
     );
 }
