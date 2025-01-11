@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import { ThemeProvider } from 'next-themes'
-import siteMetadata from '@/data/siteMetadata'
+import { ThemeProvider } from 'next-themes';
+import siteMetadata from '@/data/siteMetadata';
 
 export default function ThemeProviders({ children }) {
     const theme = siteMetadata.theme || 'system';
@@ -9,5 +9,5 @@ export default function ThemeProviders({ children }) {
         <ThemeProvider attribute="class" defaultTheme={theme} enableSystem>
             {children}
         </ThemeProvider>
-    )
+    );
 }
