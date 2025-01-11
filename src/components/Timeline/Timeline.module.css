@@ -1,17 +1,17 @@
-/* Timeline.module.css */
-.timelineBlock {
-    border: 1px solid black;
+.timeLine {
     width: 100%;
-    height: 700px;
-    background-color: beige;
-    position: relative;
+    height: 10px;
+    background-color: #ddd;
+    display: flex;
+    margin-bottom: 20px;
 }
 
-.timelineCardContainer {
-    position: sticky;
-    top: 0; /* Установлено значение top */
-    height: 200px;
-    background-color: #85cb75;
-    width: 100%;
-    z-index: 1; /* При необходимости */
+.segment {
+    flex: 1;
+    height: 100%;
+    border-right: 2px solid #000;
+}
+
+.segment:last-child {
+    border-right: none;
 }
