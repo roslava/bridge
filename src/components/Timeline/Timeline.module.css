@@ -10,6 +10,7 @@
     flex: 1;
     height: 100%;
     border-right: 2px solid #000;
+    cursor: pointer; /* Делаем сегменты кликабельными */
 }
 
 .segment:last-child {

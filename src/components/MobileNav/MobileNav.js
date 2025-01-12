@@ -1,9 +1,9 @@
 'use client'
 
 import Link from "next/link";
-import { Dialog, Transition } from '@headlessui/react'
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
-import { Fragment, useState, useEffect, useRef } from 'react'
+import {Dialog, Transition} from '@headlessui/react'
+import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock'
+import {Fragment, useState, useEffect, useRef} from 'react'
 
 
 const MobileNav = () => {
@@ -54,7 +54,7 @@ const MobileNav = () => {
                         leaveTo="opacity-0"
                         unmount={false}
                     >
-                        <div className="fixed inset-0 z-60 bg-black/25" />
+                        <div className="fixed inset-0 z-60 bg-black/25"/>
                     </Transition.Child>
 
                     <Transition.Child
@@ -67,15 +67,21 @@ const MobileNav = () => {
                         leaveTo="translate-x-full opacity-0"
                         unmount={false}
                     >
-                        <Dialog.Panel className="fixed left-0 top-0 z-70 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
+                        <Dialog.Panel
+                            className="fixed left-0 top-0 z-70 h-full w-full bg-white opacity-95 duration-300 dark:bg-gray-950 dark:opacity-[0.98]">
                             <nav
                                 ref={navRef}
                                 className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pl-12 pt-2 text-left"
                             >
-
-                                <Link onClick={onToggleNav}  className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"  href="/"> Главная </Link>
-                                <Link onClick={onToggleNav}  className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"  href="/photo-gallery"> Фотогалерея </Link>
-
+                                <Link onClick={onToggleNav}
+                                      className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                                      href="/">Главная</Link>
+                                <Link onClick={onToggleNav}
+                                      className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                                      href="/photo-gallery">Фотогалерея</Link>
+                                <Link onClick={onToggleNav}
+                                      className="mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline outline-0 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
+                                      href="/story-in-detail">История в деталях</Link>
                             </nav>
 
                             <button
